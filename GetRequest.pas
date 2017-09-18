@@ -61,7 +61,7 @@ begin
   iniResponse;
   if assigned(FHttp) and assigned(FDownload) then
   begin
-    vUrl := format('%s/%s/%s',[FDownload.url, FDownload.guid, FDownload.fileExt]);
+    vUrl := format('%s/%s/%s',[FDownload.url, FDownload.name, FDownload.extension]);
     try
       FHTTP.Get(vUrl, aFileStream);
       result := true;
